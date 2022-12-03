@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: rgb(20, 20, 20);
+}
+
+.App {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+  }
+
+  .search {
+    width: 300px;
+    display: flex;
+    text-align: center;
+    margin-top: 3rem;
+    border: 1px solid #664b53;
+    padding: 10px;
+    // border-radius: 5px;
+    // display: flex;
+
+    input {
+      flex: auto;
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      color: rgb(215, 215, 215);
+      outline: none;
+    }
+  }
+
+  .not-found {
+    margin-top: 40px;
+    color: rgb(218, 214, 188);
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .movie {
+      width: 200px;
+      height: 300px;
+      margin: 1.5rem;
+      position: relative;
+      border-radius: 10px;
+
+      .year-sec {
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        font-size: 0.8rem;
+        color: rgb(215, 215, 215);
+        font-weight: 700;
+        height: 0;
+        width: 100%;
+        text-align: left;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        border-radius: inherit;
+      }
+      
+      .image {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: inherit;
+        }
+      }
+
+      .title-sec {
+        position: absolute;
+        bottom: 0;
+        background: rgb(45, 45, 45);
+        width: 100%;
+        padding: 10px 10px;
+        text-align: left;
+        color: rgb(255, 255, 255);
+        
+        span {
+          font-size: 0.7rem;
+          text-transform: capitalize;
+          font-weight: 7  00;
+        }
+        h3 {
+          font-size: 0.9rem;
+          font-weight: 700;
+          color: rgb(218, 214, 188);
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05, 1.05);
+        transition: 0.2s;
+        .year-sec {
+          height: 100%;
+          opacity: 1;
+        }
+
+        .title-sec {
+          background: transparent;
+          box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
