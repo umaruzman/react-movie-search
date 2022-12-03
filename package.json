@@ -1,4 +1,5 @@
 {
+  "homepage": "umaruzman.github.io/react-movie-search",
   "name": "movie_app",
   "version": "0.1.0",
   "private": true,
@@ -46,6 +47,5 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  },
-  "homepage": "umaruzman.github.io/react-movie-search"
+  }
 }
